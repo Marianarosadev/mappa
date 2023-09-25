@@ -2,8 +2,10 @@ unique_ids:
   forms:
     Form1: AOAEEHQWPCFVZBDIUQGZBXGCLZMR5JGV
     login: '1695651759670417404998519.72235'
+    register: '1695652738404543057841579.3581'
   modules: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1695653600789793581490818.4906'
   assets:
     standard-page.html: IB7T7VNGYMVSPSVOWM2JNM4HZC3XLNDD
     theme.css: UV3PI2RDRXYIBLDEI53ZHMU7YR2KF4LI

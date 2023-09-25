@@ -1,3 +1,39 @@
-container: {type: ColumnPanel}
-components: []
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: E-mail, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'YQEQHM,FIDUHI'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: email
+  layout_properties: {grid_position: 'YQEQHM,QYPMMA', full_width_row: false}
+  event_bindings: {pressed_enter: text_box_1_pressed_enter}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Senha, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'JFXDGJ,DGRJWO'}
+- type: TextBox
+  properties: {}
+  name: password
+  layout_properties: {grid_position: 'JFXDGJ,GDFSIA'}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Login, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: button_1
+  layout_properties: {grid_position: 'LSPINR,YPMKKM'}
+  event_bindings: {click: button_1_click}
 is_package: true

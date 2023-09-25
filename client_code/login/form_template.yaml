@@ -15,7 +15,7 @@ components:
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: '', bold: false, underline: false}
   name: email
-  layout_properties: {grid_position: 'YQEQHM,QYPMMA', full_width_row: false}
+  layout_properties: {grid_position: 'YQEQHM,GTUCXN', full_width_row: false}
   event_bindings: {pressed_enter: text_box_1_pressed_enter}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -34,6 +34,6 @@ components:
     icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: ''}
   name: button_1
-  layout_properties: {grid_position: 'LSPINR,YPMKKM'}
+  layout_properties: {grid_position: 'XWNZGX,PUSSSQ'}
   event_bindings: {click: button_1_click}
 is_package: true

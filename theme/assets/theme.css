@@ -1069,9 +1069,15 @@ div.plot-container.plotly svg.main-svg {
 }
 
 .anvil-role-form-input {
-  border-radius: 5px
+  border-radius: 5px;
+  background: #FFFFFF;
+  color: #cbccce;
 }
 
 .anvil-role-form-container {
   display: flex
+}
+
+.anvil-role-row-invalid-msg {
+  height: 10px;
 }

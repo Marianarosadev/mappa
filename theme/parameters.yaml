@@ -55,6 +55,7 @@ roles:
 - {name: form-label}
 - {name: form-input}
 - {name: form-container}
+- {name: row-invalid-msg}
 color_scheme:
   preset_groups:
   - name: Colour Scheme

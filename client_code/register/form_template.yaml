@@ -2,66 +2,71 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
 components:
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: E-mail, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: email
-  layout_properties: {grid_position: 'TZQDKY,YRBTQO'}
-- type: TextBox
-  properties: {}
-  name: inputEmail
-  layout_properties: {grid_position: 'TZQDKY,EEOZRY'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Senha, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: password
-  layout_properties: {grid_position: 'TBFFQU,SWZKPB'}
-- type: TextBox
-  properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: '', bold: false, underline: false}
-  name: inputPassword
-  layout_properties: {grid_position: 'TBFFQU,LJHQOK'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Servidor, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: server
-  layout_properties: {grid_position: 'ZOWMNM,AAKKTL'}
-- type: DropDown
-  properties:
-    role: null
-    align: full
-    tooltip: ''
-    placeholder: Escolha o servidor
-    border: ''
-    enabled: true
-    foreground: ''
-    items: [server 1, server 2, server 3]
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: true
-  name: DropDownServer
-  layout_properties: {grid_position: 'ZOWMNM,DMJZCR'}
-- type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: '', visible: true, text: Cadastrar, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  name: registerButton
-  layout_properties: {grid_position: 'FYEMNA,EIJRPA'}
-  event_bindings: {click: registerButton_click}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'MYLUTI,CJTDTC'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: E-mail, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: email
+    layout_properties: {grid_position: 'YYHPWR,HSWDNO'}
+  - type: TextBox
+    properties: {}
+    name: inputEmail
+    layout_properties: {grid_position: 'YYHPWR,WPBMUL'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Senha, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: password
+    layout_properties: {grid_position: 'PMEDDF,QVRTFK'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: inputPassword
+    layout_properties: {grid_position: 'PMEDDF,SBPBXC'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Servidor, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: server
+    layout_properties: {grid_position: 'ZPITVG,KZAQFW'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: Escolha o servidor
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [server 1, server 2, server 3]
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: DropDownServer
+    layout_properties: {grid_position: 'ZPITVG,BOSVHX'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Cadastrar, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: registerButton
+    layout_properties: {grid_position: 'MFHGEN,DNIOJF'}
+    event_bindings: {click: registerButton_click}
 is_package: true

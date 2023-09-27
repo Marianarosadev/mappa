@@ -51,6 +51,10 @@ roles:
   components: [TextBox, TextArea, DatePicker, DropDown]
 - {name: login}
 - {name: btn-default}
+- {name: btn-redirect-register}
+- {name: form-label}
+- {name: form-input}
+- {name: form-container}
 color_scheme:
   preset_groups:
   - name: Colour Scheme

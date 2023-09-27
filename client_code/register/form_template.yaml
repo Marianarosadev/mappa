@@ -3,84 +3,55 @@ container:
   properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_1
-  layout_properties: {grid_position: 'MYLUTI,CJTDTC'}
+  properties: {role: login, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: column_panel_5
+  layout_properties: {grid_position: 'KNBEMA,CSCKOH'}
   components:
+  - type: Image
+    properties: {role: null, vertical_align: center, height: '80', tooltip: '', border: '',
+      foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+      source: _/theme/mapa_logo.png, spacing_below: small, background: '', horizontal_align: center}
+    name: image_1
+    layout_properties: {grid_position: 'QONNFY,TGPYVK'}
   - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+    properties: {role: form-label, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: E-mail, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: email
-    layout_properties: {grid_position: 'YYHPWR,HSWDNO'}
+    layout_properties: {grid_position: 'ZDDZYX,OFWIRE'}
   - type: TextBox
-    properties: {}
+    properties: {role: form-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
     name: inputEmail
-    layout_properties: {grid_position: 'YYHPWR,WPBMUL'}
+    layout_properties: {grid_position: 'ZDDZYX,GGUTOL'}
     event_bindings: {focus: inputEmail_focus}
-  - type: ColumnPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: ''}
-    name: column_panel_2
-    layout_properties:
-      col_widths: {}
-      grid_position: JPWMFW,PFJARE
-    components:
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_1
-      layout_properties: {grid_position: 'TEUXZB,RPTRBN'}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
-        visible: true, text: '', font_size: 12, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      name: emailErrorMessage
-      layout_properties: {grid_position: 'TEUXZB,WUOGQX'}
   - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+    properties: {role: form-label, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Senha, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: password
-    layout_properties: {grid_position: 'PMEDDF,QVRTFK'}
+    layout_properties: {grid_position: 'SDFLTN,YBFMCA'}
   - type: TextBox
     properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: '',
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
     name: inputPassword
-    layout_properties: {grid_position: 'PMEDDF,SBPBXC'}
+    layout_properties: {grid_position: 'SDFLTN,RLDLEA'}
     event_bindings: {pressed_enter: inputPassword_pressed_enter, lost_focus: inputPassword_pressed_enter}
-  - type: ColumnPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RPTRBN":30,"WUOGQX":30}',
-      spacing_below: small, background: ''}
-    name: column_panel_3
-    layout_properties:
-      col_widths: {}
-      grid_position: IQBKIC,EWHUVY
-    components:
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_1_copy
-      layout_properties: {grid_position: 'TEUXZB,RPTRBN'}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
-        visible: true, text: '', font_size: 12, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      name: passwordErrorMessage
-      layout_properties: {grid_position: 'TEUXZB,WUOGQX'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Servidor, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: server
-    layout_properties: {grid_position: 'ZPITVG,KZAQFW'}
+    layout_properties: {grid_position: 'DTIGGW,GSZEWQ'}
   - type: DropDown
     properties:
       role: null
@@ -102,33 +73,20 @@ components:
       underline: false
       include_placeholder: true
     name: DropDownServer
-    layout_properties: {grid_position: 'ZPITVG,BOSVHX'}
-  - type: ColumnPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WUOGQX":30}',
-      spacing_below: small, background: ''}
-    name: column_panel_4
-    layout_properties:
-      col_widths: {}
-      grid_position: HPVZUI,NXORPN
-    components:
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_1_copy_2
-      layout_properties: {grid_position: 'TEUXZB,HCFPMF'}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
-        visible: true, text: '', font_size: 12, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      name: serverErrorMessage
-      layout_properties: {grid_position: 'TEUXZB,WUOGQX'}
+    layout_properties: {grid_position: 'DTIGGW,QODUSF'}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Cadastrar, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: registerButton
-    layout_properties: {grid_position: 'MFHGEN,DNIOJF'}
+    layout_properties: {grid_position: 'IETBRI,BNVUGW'}
     event_bindings: {click: registerButton_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: voltar ao login, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'IETBRI,CBVGGN'}
 is_package: true

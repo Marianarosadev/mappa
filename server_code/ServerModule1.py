@@ -9,10 +9,26 @@ import re
 @anvil.server.callable
 
 def encryptedPassword(email, password, server):
-  regex = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+  regexMail = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+  regexPassword =  r'^\s*$'
   
-  if re.match(regex, email):
-    if app_tables.users.get(email=email) is None:
+  if re.match(regexMail, email):
+    if app_tables.users.get(email=email) is None :
+      
+      if re.match(regexPassword, password):
+        return {
+          'status': False,
+          'message': 'Campo obrigatório',
+          'type': 'password'
+        }
+
+      if server is None:
+        return {
+          'status': False,
+          'message': 'Selecione uma opção',
+          'type': 'server'
+        }
+        
       passwordHash = password.encode()
       encryptedPassword = bcrypt.hashpw(passwordHash, bcrypt.gensalt())
       app_tables.users.add_row(
@@ -24,17 +40,21 @@ def encryptedPassword(email, password, server):
       )
       return {
         'status': True,
-        'message': 'sucess'
+        'message': 'sucess',
+        'type': 'sucess'
       }
+    
     else: 
       return {
         'status': False,
-        'message': 'E=mail já cadastrado'
+        'message': 'E=mail já cadastrado',
+        'type': 'email'
       }
   else:
     return {
       'status': False,
-      'message': 'E=mail inválido'
+      'message': 'E=mail inválido',
+      'type': 'email'
     }
   
 

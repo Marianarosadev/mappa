@@ -19,12 +19,23 @@ class register(registerTemplate):
     if returnRegister['status']:
       open_form('login')
       alert('Cadastro realizado com sucesso')
-    else:
+    elif returnRegister['type'] == 'email':
       self.emailErrorMessage.text = returnRegister['message']
       self.column_panel_2.visible = True
+    elif returnRegister['type'] == 'password':
+      self.passwordErrorMessage.text = returnRegister['message']
+      self.column_panel_3.visible = True
+    elif returnRegister['type'] == 'server':
+      self.serverErrorMessage.text = returnRegister['message']
+      self.column_panel_4.visible = True
 
   def inputEmail_focus(self, **event_args):
     self.column_panel_2.visible = False
+
+  def inputPassword_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
 
 
 

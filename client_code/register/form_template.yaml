@@ -53,6 +53,27 @@ components:
       background: '', bold: false, underline: false}
     name: inputPassword
     layout_properties: {grid_position: 'PMEDDF,SBPBXC'}
+    event_bindings: {pressed_enter: inputPassword_pressed_enter, lost_focus: inputPassword_pressed_enter}
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RPTRBN":30,"WUOGQX":30}',
+      spacing_below: small, background: ''}
+    name: column_panel_3
+    layout_properties:
+      col_widths: {}
+      grid_position: IQBKIC,EWHUVY
+    components:
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_1_copy
+      layout_properties: {grid_position: 'TEUXZB,RPTRBN'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
+        visible: true, text: '', font_size: 12, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: passwordErrorMessage
+      layout_properties: {grid_position: 'TEUXZB,WUOGQX'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Servidor, font_size: null, font: '', spacing_above: small,
@@ -82,6 +103,26 @@ components:
       include_placeholder: true
     name: DropDownServer
     layout_properties: {grid_position: 'ZPITVG,BOSVHX'}
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WUOGQX":30}',
+      spacing_below: small, background: ''}
+    name: column_panel_4
+    layout_properties:
+      col_widths: {}
+      grid_position: HPVZUI,NXORPN
+    components:
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_1_copy_2
+      layout_properties: {grid_position: 'TEUXZB,HCFPMF'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
+        visible: true, text: '', font_size: 12, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: serverErrorMessage
+      layout_properties: {grid_position: 'TEUXZB,WUOGQX'}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Cadastrar, font_size: null, font: '', spacing_above: small,

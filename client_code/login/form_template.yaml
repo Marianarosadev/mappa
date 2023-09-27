@@ -3,10 +3,18 @@ container:
   properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {role: login, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
   name: column_panel_1
   layout_properties: {grid_position: 'JEAKTK,NDFERC'}
   components:
+  - type: Image
+    properties: {role: null, vertical_align: center, height: 111, tooltip: '', border: '',
+      foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+      source: _/theme/Mapa_Positivo.png, spacing_below: small, background: '', horizontal_align: center}
+    name: image_1
+    layout_properties: {grid_position: 'OPNJOT,WAXULJ'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: E-mail, font_size: null, font: '', spacing_above: small,
@@ -75,20 +83,20 @@ components:
         icon: ''}
       name: emailErrorMessage_password
       layout_properties: {grid_position: 'TEUXZB,WUOGQX'}
-- type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: '', visible: true, text: Realizar cadastro, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
-    bold: false, underline: false, icon: ''}
-  name: inputRedirectRegister
-  layout_properties: {grid_position: 'FZEUDV,YLMHZC'}
-  event_bindings: {click: button_2_click}
-- type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: '', visible: true, text: Login, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  name: button_1
-  layout_properties: {grid_position: 'FZEUDV,LALHNB'}
-  event_bindings: {click: button_1_click}
+  - type: Button
+    properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Login, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'JGAPSC,GEVXEQ'}
+    event_bindings: {click: button_1_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Realizar cadastro, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: inputRedirectRegister
+    layout_properties: {grid_position: 'JGAPSC,MCVWEI'}
+    event_bindings: {click: button_2_click}
 is_package: true

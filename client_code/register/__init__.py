@@ -47,6 +47,10 @@ class register(registerTemplate):
   def inputEmail_focus(self, **event_args):
     self.column_panel_1.visible = False
 
+  def inputPassword_focus(self, **event_args):
+    self.column_panel_2.visible = False
+
+
 
     
       

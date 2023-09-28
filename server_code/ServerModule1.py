@@ -8,6 +8,49 @@ import re
 
 @anvil.server.callable
 
+def validEmailInput(email):
+  regexMail = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+  regexEmpty =  r'^\s*$'
+
+  if app_tables.users.get(email=email):
+    return {
+      'status': False,
+      'message': 'E-mail já cadastrado',
+      'type': 'email'
+    }
+  elif re.match(regexMail, email) is False: 
+    return {
+      'status': False,
+      'message': 'E-mail inválido',
+      'type': 'email'
+    }
+  elif re.match(regexEmpty, email) is False :
+    return {
+      'status': False,
+      'message': 'O e-mail é obrigatório',
+      'type': 'email'
+    }
+  else:
+    return {
+      'status': True,
+      'message': '',
+      'type': 'email'
+    }
+
+def register(email, password, server):
+  try:
+    passwordHash = password.encode()
+    encryptedPassword = bcrypt.hashpw(passwordHash, bcrypt.gensalt())
+    app_tables.users.add_row(
+      email=email, 
+      password_hash=encryptedPassword.decode('utf-8'), 
+      server=server,
+      confirmed_email=True,
+      enabled=True
+    )
+  except:
+    pass
+
 def encryptedPassword(email, password, server):
   regexMail = r'^[\w\.-]+@[\w\.-]+\.\w+$'
   regexPassword =  r'^\s*$'

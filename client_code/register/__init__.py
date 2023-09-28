@@ -15,9 +15,10 @@ class register(registerTemplate):
 
   def registerButton_click(self, **event_args):
 
-    # validRegisterInputEmail()
-    
-    returnRegister = anvil.server.call('encryptedPassword', self.inputEmail.text, self.inputPassword.text, self.DropDownServer.selected_value)
+    emailValid = validRegisterInputEmail()
+
+    if emailValid:
+      returnRegister = anvil.server.call('register', self.inputEmail.text, self.inputPassword.text, self.DropDownServer.selected_value)
     
     if returnRegister['status']:
       open_form('login')
@@ -32,29 +33,18 @@ class register(registerTemplate):
       self.serverErrorMessage.text = returnRegister['message']
       self.column_panel_3.visible = True
 
-  # def validRegisterInputEmail(self):
-  #   pass
-    
+  def validRegisterInputEmail(self):
+    checkExistingEmail = anvil.server.call('validEmailInput', self.inputEmail.text)
+
+    if checkExistingEmail['status'] is False:
+      self.emailErrorMessage.text = returnRegister['message']
+      self.column_panel_1.visible = True
+      return False
+    else: 
+      return True
+
   def inputEmail_focus(self, **event_args):
     self.column_panel_1.visible = False
-
-  def inputPassword_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def inputEmail_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def emailErrorMessage_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-
-
-
-
-
 
     
       

@@ -5,6 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
 
 class register(registerTemplate):
   def __init__(self, **properties):
@@ -14,37 +15,38 @@ class register(registerTemplate):
     # Any code you write here will run before the form opens.
 
   def registerButton_click(self, **event_args):
+    emailValid = self.validRegisterInputEmail()
+    passwordValid = self.validRegisterInputPassword()
 
-    emailValid = validRegisterInputEmail()
-
-    if emailValid:
-      returnRegister = anvil.server.call('register', self.inputEmail.text, self.inputPassword.text, self.DropDownServer.selected_value)
+    print('emailValid', emailValid)
+    print('passwordValid', passwordValid)
     
-    if returnRegister['status']:
-      open_form('login')
-      alert('Cadastro realizado com sucesso')
-    elif returnRegister['type'] == 'email':
-      self.emailErrorMessage.text = returnRegister['message']
-      self.column_panel_1.visible = True
-    elif returnRegister['type'] == 'password':
-      self.passwordErrorMessage.text = returnRegister['message']
-      self.column_panel_2.visible = True
-    elif returnRegister['type'] == 'server':
-      self.serverErrorMessage.text = returnRegister['message']
-      self.column_panel_3.visible = True
-
+    if emailValid and passwordValid:
+      returnRegister = anvil.server.call('registerUser', self.inputEmail.text, self.inputPassword.text, self.DropDownServer.selected_value)
+    
   def validRegisterInputEmail(self):
-    checkExistingEmail = anvil.server.call('validEmailInput', self.inputEmail.text)
-
-    if checkExistingEmail['status'] is False:
-      self.emailErrorMessage.text = returnRegister['message']
+    checkEmail = anvil.server.call('validEmailInput', self.inputEmail.text)
+    
+    if checkEmail['status'] is False:
+      self.emailErrorMessage.text = checkEmail['message']
       self.column_panel_1.visible = True
+      return False
+    else: 
+      return True
+
+  def validRegisterInputPassword(self, **event_args):
+    regexEmpty =  r'^\s*$'
+
+    if re.match(regexEmpty, self.inputPassword.text):
+      self.passwordErrorMessage.text = 'O campo senha é obrigatório'
+      self.column_panel_2.visible = True
       return False
     else: 
       return True
 
   def inputEmail_focus(self, **event_args):
     self.column_panel_1.visible = False
+
 
     
       

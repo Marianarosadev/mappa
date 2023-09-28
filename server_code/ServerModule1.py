@@ -7,27 +7,26 @@ import bcrypt
 import re
 
 @anvil.server.callable
-
 def validEmailInput(email):
   regexMail = r'^[\w\.-]+@[\w\.-]+\.\w+$'
   regexEmpty =  r'^\s*$'
 
-  if app_tables.users.get(email=email):
+  if re.match(regexEmpty, email):
     return {
       'status': False,
-      'message': 'E-mail já cadastrado',
+      'message': 'O campo e-mail é obrigatório',
       'type': 'email'
     }
-  elif re.match(regexMail, email) is False: 
+  elif not re.match(regexMail, email): 
     return {
       'status': False,
       'message': 'E-mail inválido',
       'type': 'email'
     }
-  elif re.match(regexEmpty, email) is False :
+  elif app_tables.users.get(email=email):
     return {
       'status': False,
-      'message': 'O e-mail é obrigatório',
+      'message': 'E-mail já cadastrado',
       'type': 'email'
     }
   else:
@@ -37,7 +36,8 @@ def validEmailInput(email):
       'type': 'email'
     }
 
-def register(email, password, server):
+@anvil.server.callable
+def registerUser(email, password, server):
   try:
     passwordHash = password.encode()
     encryptedPassword = bcrypt.hashpw(passwordHash, bcrypt.gensalt())
@@ -48,59 +48,5 @@ def register(email, password, server):
       confirmed_email=True,
       enabled=True
     )
-  except:
-    pass
-
-def encryptedPassword(email, password, server):
-  regexMail = r'^[\w\.-]+@[\w\.-]+\.\w+$'
-  regexPassword =  r'^\s*$'
-  
-  if re.match(regexMail, email):
-    if app_tables.users.get(email=email) is None :
-      
-      if re.match(regexPassword, password):
-        return {
-          'status': False,
-          'message': 'Campo obrigatório',
-          'type': 'password'
-        }
-
-      if server is None:
-        return {
-          'status': False,
-          'message': 'Selecione uma opção',
-          'type': 'server'
-        }
-        
-      passwordHash = password.encode()
-      encryptedPassword = bcrypt.hashpw(passwordHash, bcrypt.gensalt())
-      app_tables.users.add_row(
-        email=email, 
-        password_hash=encryptedPassword.decode('utf-8'), 
-        server=server,
-        confirmed_email=True,
-        enabled=True
-      )
-      return {
-        'status': True,
-        'message': 'sucess',
-        'type': 'sucess'
-      }
-    
-    else: 
-      return {
-        'status': False,
-        'message': 'E=mail já cadastrado',
-        'type': 'email'
-      }
-  else:
-    return {
-      'status': False,
-      'message': 'E=mail inválido',
-      'type': 'email'
-    }
-  
-
-  
-  
-  
+  except Exception as e:
+    print('e', e)

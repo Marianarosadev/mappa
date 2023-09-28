@@ -46,6 +46,11 @@ class register(registerTemplate):
     """This method is called when the user presses Enter in this text box"""
     pass
 
+  def emailErrorMessage_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+
 
 
 

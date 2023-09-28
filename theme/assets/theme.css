@@ -1081,3 +1081,8 @@ div.plot-container.plotly svg.main-svg {
 .anvil-role-row-invalid-msg {
   height: 10px;
 }
+
+.anvil-role-text-error-message {
+  color: red;
+  font-size: 14px;
+}

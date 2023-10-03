@@ -7,34 +7,27 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class recoverCode(recoverCodeTemplate):
-  def __init__(self, previousPage = None, **properties):
+  def __init__(self, email, previousPage = None, **properties):
     self.previousPage = previousPage
     self.previousPage.nextPage = self
     self.timer = 60
+    self.email = email
     
     self.init_components(**properties)
 
   def button_1_click(self, **event_args):
-    emailValid = self.validRegisterInputEmail()
-
-    if emailValid:
-      open_form('resetPassword', previousPage = self)
-
-  def validRegisterInputEmail(self):
-    checkEmail = anvil.server.call('validEmailInput', self.inputEmail.text)
-
-    if checkEmail['message'] == 'E-mail já cadastrado':
-      return True
+    user = app_tables.users.get(email=self.email)
+    
+    if user['recover_code'] == self.inputCode.text:
+      open_form('resetPassword', self.email, previousPage = self)
     else:
-      self.emailErrorMessage.text = 'E-mail não cadastrado no sistema'
+      self.codeErrorMessage.text = 'Código inválido'
       self.column_panel_2.visible = True
-      return False
 
   def button_2_click(self, **event_args):
     open_form(self.previousPage)
 
   def timer_1_tick(self, **event_args):
-
     if self.timer == 0:
       self.button_3.enabled = True
       self.button_3.text = 'Reenviar código'
@@ -45,10 +38,18 @@ class recoverCode(recoverCodeTemplate):
 
   def button_3_click(self, **event_args):
     sendCode = anvil.server.call('sendRecoverEmail', self.inputEmail.text)
-      if sendCode['status'] is True:
-        open_form('recoverCode', previousPage = self)
-      else:
-        alert('Falha ao enviar código, tente novamente')
+    if sendCode['status'] is True:
+      self.timer = 60
+      self.button_3.text = 'Reenviar código ({})'.format(self.timer)
+      self.timer_1.interval = 1
+      alert('Código reenviado com sucesso')
+    else:
+      alert('Falha ao reenviar código, tente novamente')
+
+  def inputCode_focus(self, **event_args):
+    self.column_panel_2.visible = False
+
+
 
 
     

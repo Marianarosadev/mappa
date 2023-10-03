@@ -58,7 +58,7 @@ def registerUser(email, password, server):
 def sendRecoverEmail(email):
   user = app_tables.users.get(email=email)
 
-  if user['recover_code_send'] > datetime.datetime.now()+datetime.timedelta(minutes=15):
+  if user['recover_code_send'] is None or user['recover_code_send'].replace(tzinfo=None) > datetime.datetime.now()+datetime.timedelta(minutes=15):
     recoderCode = secrets.token_urlsafe(4)
     user.update(recover_code=recoderCode, recover_code_send=datetime.datetime.now())
   else:
@@ -70,7 +70,15 @@ def sendRecoverEmail(email):
     'status': True,
     'content': recoderCode
   }
-  
 
-
-    
+@anvil.server.callable
+def resetPasswordService(email, password):
+  try:
+    passwordHash = password.encode()
+    encryptedPassword = bcrypt.hashpw(passwordHash, bcrypt.gensalt())
+    user = app_tables.users.get(email=email)
+    user.update(password_hash=encryptedPassword.decode('utf-8'), n_password_failures=0)
+    return True
+  except Exception as e:
+    print('e', e)
+    return False

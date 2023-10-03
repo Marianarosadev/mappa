@@ -2,7 +2,7 @@ container: {type: ColumnPanel}
 components:
 - type: ColumnPanel
   properties: {role: login, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"FFEMJY":10,"RJJXDI":50}',
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
   name: column_panel_1
   layout_properties:
@@ -17,7 +17,7 @@ components:
     layout_properties: {grid_position: 'QFMMEQ,IMKYLV'}
   - type: RichText
     properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-      foreground: '', visible: true, font_size: null, content: '####** Recuperar senha ',
+      foreground: '', visible: true, font_size: null, content: '## Recuperar senha ',
       font: '', spacing_above: small, spacing_below: small, data: null, background: '',
       format: markdown}
     name: rich_text_1
@@ -46,7 +46,7 @@ components:
       event_bindings: {pressed_enter: text_box_1_pressed_enter, focus: email_focus}
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RPTRBN":30,"WUOGQX":30}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RPTRBN":10,"WUOGQX":50}',
       spacing_below: small, background: ''}
     name: column_panel_2
     layout_properties: {grid_position: 'MTIFRG,MHNRED'}
@@ -62,52 +62,16 @@ components:
         icon: ''}
       name: emailErrorMessage
       layout_properties: {grid_position: 'TEUXZB,WUOGQX'}
-  - type: Label
-    properties: {role: form-label, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Senha, font_size: null, font: '', spacing_above: small,
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Cancelar, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
-    name: label_2
-    layout_properties: {grid_position: 'XXAMJL,FFEMJY'}
-  - type: TextBox
-    properties: {role: form-input, align: left, hide_text: true, tooltip: '', placeholder: '',
-      border: '1px solid #cbccce', enabled: true, foreground: '', visible: true, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: 'theme:On Primary', bold: false, underline: false}
-    name: password
-    layout_properties: {grid_position: 'XXAMJL,RJJXDI'}
-    event_bindings: {focus: password_focus}
-  - type: ColumnPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RPTRBN":30,"WUOGQX":30}',
-      spacing_below: small, background: ''}
-    name: column_panel_3
-    layout_properties:
-      col_widths: {}
-      grid_position: ZNLKIH,KEROTH
-    components:
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_1_copy
-      layout_properties: {grid_position: 'TEUXZB,RPTRBN'}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
-        visible: true, text: '', font_size: 12, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      name: emailErrorMessage_password
-      layout_properties: {grid_position: 'TEUXZB,WUOGQX'}
-  - type: Link
-    properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Esqueceu a senha?', font_size: null, wrap_on: mobile,
-      font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    name: redirectRecoverPassword
-    layout_properties: {grid_position: 'YEVPFH,NRSHYV'}
+    name: button_2
+    layout_properties: {grid_position: 'JGAPSC,KJINKH'}
   - type: Button
     properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Login, font_size: null, font: '', spacing_above: small,
+      foreground: '', visible: true, text: Continuar, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: button_1

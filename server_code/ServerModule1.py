@@ -1,3 +1,4 @@
+import anvil.email
 import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -5,6 +6,8 @@ from anvil.tables import app_tables
 import anvil.server
 import bcrypt
 import re
+import secrets
+import datetime
 
 @anvil.server.callable
 def validEmailInput(email):
@@ -50,3 +53,24 @@ def registerUser(email, password, server):
     )
   except Exception as e:
     print('e', e)
+
+@anvil.server.callable
+def sendRecoverEmail(email):
+  user = app_tables.users.get(email=email)
+
+  if user['recover_code_send'] > datetime.datetime.now()+datetime.timedelta(minutes=15):
+    recoderCode = secrets.token_urlsafe(4)
+    user.update(recover_code=recoderCode, recover_code_send=datetime.datetime.now())
+  else:
+    recoderCode = user['recover_code']
+
+  print('recoverCode', recoderCode)
+  
+  return {
+    'status': True,
+    'content': recoderCode
+  }
+  
+
+
+    

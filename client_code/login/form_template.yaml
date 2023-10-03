@@ -98,6 +98,7 @@ components:
       icon: ''}
     name: redirectRecoverPassword
     layout_properties: {grid_position: 'YEVPFH,NRSHYV'}
+    event_bindings: {click: redirectRecoverPassword_click}
   - type: Button
     properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Login, font_size: null, font: '', spacing_above: small,

@@ -1049,8 +1049,6 @@ div.plot-container.plotly svg.main-svg {
 
 .anvil-role-btn-default {
   background-color: #3be293;
-  color: #cbccce;
-  font-color: #FFFFFF;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -1087,6 +1085,6 @@ div.plot-container.plotly svg.main-svg {
   font-size: 14px;
 }
 
-.anvil-role-btn-outline {
-  
+.anvil-role-btn-outline .btn {
+  border-radius: 5px;
 }

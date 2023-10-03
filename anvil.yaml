@@ -7,6 +7,9 @@ services:
   client_config: {allow_signup: false, enable_automatically: true, use_email: true,
     confirm_email: true}
   server_config: {user_table: users}
+- source: /runtime/services/anvil/email.yml
+  client_config: {}
+  server_config: {test_mode: false}
 startup: {type: form, module: login}
 package_name: M3_App_2
 allow_embedding: false
@@ -40,5 +43,11 @@ db_schema:
     - name: server
       admin_ui: {width: 200, order: 6}
       type: string
+    - name: recover_code
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: recover_code_send
+      admin_ui: {width: 200, order: 8}
+      type: datetime
     title: Users
 renamed: true

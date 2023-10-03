@@ -1,13 +1,13 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{}'}
+container: {type: ColumnPanel}
 components:
 - type: ColumnPanel
   properties: {role: login, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"FFEMJY":10,"RJJXDI":50}',
     spacing_below: small, background: ''}
   name: column_panel_1
-  layout_properties: {grid_position: 'JEAKTK,EIWBVV'}
+  layout_properties:
+    col_widths: {}
+    grid_position: BNMAMX,MOLAFB
   components:
   - type: Image
     properties: {role: null, vertical_align: center, height: '80', tooltip: '', border: '',
@@ -15,6 +15,13 @@ components:
       source: _/theme/mapa_logo.png, spacing_below: large, background: '', horizontal_align: center}
     name: image_1
     layout_properties: {grid_position: 'QFMMEQ,IMKYLV'}
+  - type: RichText
+    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: '####** Recuperar senha ',
+      font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+      format: markdown}
+    name: rich_text_1
+    layout_properties: {grid_position: 'YEESWQ,ORYDHX'}
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"BODHXV":10,"KOSGWX":50}',

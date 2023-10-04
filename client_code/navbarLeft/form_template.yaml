@@ -1,0 +1,11 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Image
+  properties: {role: img-sidebar-left, vertical_align: center, height: '50', tooltip: '',
+    border: '', foreground: '', visible: true, display_mode: original_size, spacing_above: small,
+    source: _/theme/mapa_logo.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_1
+  layout_properties: {grid_position: 'GWYWOM,ZEVLMN', full_width_row: false}
+is_package: true

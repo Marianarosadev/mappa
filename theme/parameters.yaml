@@ -58,6 +58,7 @@ roles:
 - {name: row-invalid-msg}
 - {name: text-error-message}
 - {name: btn-outline}
+- {name: img-sidebar-left}
 color_scheme:
   preset_groups:
   - name: Colour Scheme

@@ -46,11 +46,4 @@ class login(loginTemplate):
 
   def redirectRecoverPassword_click(self, **event_args):
     open_form('forgotPassword', previousPage = self)
-
-
-
     
-
-  
-
-

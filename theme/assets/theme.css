@@ -1087,3 +1087,8 @@ div.plot-container.plotly svg.main-svg {
 .anvil-role-btn-outline .btn {
   border-radius: 5px;
 }
+
+.anvil-role-img-sidebar-left {
+  width: 160px;
+  height: 50px;
+}

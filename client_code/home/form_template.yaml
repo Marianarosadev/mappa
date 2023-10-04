@@ -12,3 +12,16 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - type: form:navbarRigth
+    properties: {}
+    name: custom_3
+    layout_properties: {}
+- type: form:sideBar
+  properties: {}
+  name: custom_1
+  layout_properties: {slot: left-nav}
+- type: form:navbarLeft
+  properties: {}
+  name: custom_2
+  layout_properties: {slot: title}

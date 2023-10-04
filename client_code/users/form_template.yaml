@@ -1,0 +1,64 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: ZUOWAE, title: Email, data_key: email, $$hashKey: 'object:26398'}
+      - {id: CMDYOB, title: Enabled, data_key: enabled, $$hashKey: 'object:26399'}
+      - {id: FGHWUT, title: Column 1, data_key: column_1, $$hashKey: 'object:27649'}
+      auto_header: false
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'WMLBPC,KAIGFK'}
+    components:
+    - type: DataRowPanel
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        auto_display_data: true, visible: true, item: null, font_size: null, font: '',
+        spacing_above: none, spacing_below: none, italic: false, background: '', bold: false,
+        underline: false}
+      name: data_row_panel_1
+      layout_properties: {pinned: true}
+      components:
+      - type: Label
+        properties: {}
+        name: label_1
+        layout_properties: {column: ZUOWAE}
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: users.userRow}
+      name: repeating_panel_1
+      layout_properties: {}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - type: form:navbarRigth
+    properties: {}
+    name: custom_3
+    layout_properties: {}
+- type: form:sideBar
+  properties: {}
+  name: custom_1
+  layout_properties: {slot: left-nav}
+- type: form:navbarLeft
+  properties: {}
+  name: custom_2
+  layout_properties: {slot: title}

@@ -52,5 +52,8 @@ db_schema:
     - name: recover_code_send
       admin_ui: {width: 200, order: 8}
       type: datetime
+    - name: name
+      admin_ui: {width: 200, order: 9}
+      type: string
     title: Users
 renamed: true

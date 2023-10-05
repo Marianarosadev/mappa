@@ -40,6 +40,7 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: BWJLUK,PQYEJH
+    event_bindings: {focus: inputName_focus}
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"SAYEUA":15,"QKHLLI":45}',
@@ -53,7 +54,7 @@ components:
       layout_properties: {grid_position: 'NHNWRT,SAYEUA'}
     - type: Label
       properties: {role: text-error-message, align: left, tooltip: '', border: '',
-        foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        foreground: red, visible: true, text: '', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: nameErrorMessage
@@ -81,6 +82,7 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: DZAIVN,WRVFFB
+      event_bindings: {focus: inputEmail_focus}
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"TECGHA":16,"YNBDES":44}',
@@ -96,7 +98,7 @@ components:
       layout_properties: {grid_position: 'NHNWRT,TECGHA'}
     - type: Label
       properties: {role: text-error-message, align: left, tooltip: '', border: '',
-        foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        foreground: red, visible: true, text: '', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: emailErrorMessage
@@ -137,6 +139,7 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: ZSMFZC,CNTFIQ
+      event_bindings: {change: DropDownAssignment_change}
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"SAYEUA":16,"UTJXYO":44}',
@@ -152,7 +155,7 @@ components:
       layout_properties: {grid_position: 'NHNWRT,SAYEUA'}
     - type: Label
       properties: {role: text-error-message, align: left, tooltip: '', border: '',
-        foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        foreground: red, visible: true, text: '', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: assignmentErrorMessage

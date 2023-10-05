@@ -52,8 +52,10 @@ def registerUser(name, email, assignment):
       confirmed_email=True,
       enabled=True
     )
+    return True
   except Exception as e:
     print('e', e)
+    return False
 
 @anvil.server.callable
 def sendRecoverEmail(email):

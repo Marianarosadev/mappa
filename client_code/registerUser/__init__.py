@@ -16,9 +16,17 @@ class registerUser(registerUserTemplate):
     emailValid = self.validRegisterInputEmail()
     assignment = self.velidRegisterAssignment()
 
+    print('nameValid', nameValid)
+    print('emailValid', emailValid)
+    print('assignment', assignment)
+
     if nameValid and emailValid and assignment:
       returnRegister = anvil.server.call('registerUser', self.inputName.text, self.inputEmail.text, self.DropDownAssignment.selected_value)
-
+      if returnRegister:
+        alert('Novo usuário cadastrado com sucesso')
+      else:
+        alert('Ocorreu um erro ao cadastrar o usuário, tente novamente')
+  
   def validRegisterInputName(self):
     regexEmpty =  r'^\s*$'
 
@@ -34,23 +42,25 @@ class registerUser(registerUserTemplate):
 
     if checkEmail['status'] is False:
       self.emailErrorMessage.text = checkEmail['message']
-      self.column_panel_1.visible = True
+      self.column_panel_2.visible = True
       return False
     else:
       return True
 
   def velidRegisterAssignment(self):
-    regexEmpty =  r'^\s*$'
-
-    if re.match(regexEmpty, self.inputName.text):
-      self.nameErrorMessage.text = 'O campo Nome é obrigatório'
-      self.column_panel_1.visible = True
+    if self.DropDownAssignment.selected_value is None:
+      self.assignmentErrorMessage.text = 'Escolha uma opção de Atribuição'
+      self.column_panel_3.visible = True
       return False
     else:
       return True
 
-  def inputEmail_focus(self, **event_args):
+  def inputName_focus(self, **event_args):
     self.column_panel_1.visible = False
 
-  def inputPassword_focus(self, **event_args):
+  def inputEmail_focus(self, **event_args):
     self.column_panel_2.visible = False
+
+  def DropDownAssignment_change(self, **event_args):
+    self.column_panel_3.visible = False
+

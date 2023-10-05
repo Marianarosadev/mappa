@@ -42,12 +42,9 @@ def validEmailInput(email):
 @anvil.server.callable
 def registerUser(name, email, assignment):
   try:
-    passwordHash = password.encode()
-    encryptedPassword = bcrypt.hashpw(passwordHash, bcrypt.gensalt())
     app_tables.users.add_row(
       email=email, 
       name=name,
-      password_hash=encryptedPassword.decode('utf-8'), 
       assignment=assignment,
       confirmed_email=True,
       enabled=True

@@ -12,3 +12,6 @@ class users(usersTemplate):
     self.init_components(**properties)
 
     self.repeating_panel_1.items = app_tables.users.search()
+
+  def button_1_click(self, **event_args):
+    open_form('registerUser')

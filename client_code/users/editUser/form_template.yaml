@@ -1,0 +1,164 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: RichText
+  properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+    foreground: '', visible: true, font_size: null, content: '## Editar usuário',
+    font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+    format: markdown}
+  name: rich_text_1
+  layout_properties: {grid_position: 'DTOEKD,DLRAYA'}
+  components: []
+- type: ColumnPanel
+  properties: {col_widths: '{"SXQPYB":6,"CLXCUS":45}'}
+  name: column_panel_form1_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: CCXWCX,LZETWE
+  components:
+  - type: Label
+    properties: {role: form-label, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Nome, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: email_copy
+    layout_properties: {grid_position: 'UBRPTW,SXQPYB'}
+  - type: TextBox
+    properties: {role: form-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '1px solid #cbccce', enabled: true, foreground: '', visible: true, text: '',
+      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      italic: false, background: 'theme:On Primary', bold: false, underline: false}
+    name: inputName
+    layout_properties:
+      col_widths: {}
+      grid_position: UBRPTW,CLXCUS
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"SAYEUA":8,"HFQOLY":52}',
+    spacing_below: small, background: ''}
+  name: column_panel_1
+  layout_properties: {grid_position: 'ZVJPVN,ROXEYN'}
+  components:
+  - type: Spacer
+    properties: {height: 35}
+    name: spacer_1
+    layout_properties: {grid_position: 'NHNWRT,SAYEUA'}
+  - type: Label
+    properties: {role: text-error-message, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: nameErrorMessage
+    layout_properties: {grid_position: 'NHNWRT,HFQOLY'}
+- type: ColumnPanel
+  properties: {col_widths: '{"SXQPYB":8,"MKMYAL":52}'}
+  name: column_panel_form1
+  layout_properties: {grid_position: 'LIAJXY,FFDNFM'}
+  components:
+  - type: Label
+    properties: {role: form-label, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: E-mail, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: email
+    layout_properties: {grid_position: 'UBRPTW,SXQPYB'}
+  - type: TextBox
+    properties: {role: form-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '1px solid #cbccce', enabled: true, foreground: '', visible: true, text: '',
+      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      italic: false, background: 'theme:On Primary', bold: false, underline: false}
+    name: inputEmail
+    layout_properties:
+      col_widths: {}
+      grid_position: UBRPTW,MKMYAL
+    event_bindings: {pressed_enter: inputEmail_pressed_enter}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"TECGHA":8,"AEPHRN":52}',
+    spacing_below: small, background: ''}
+  name: column_panel_2
+  layout_properties:
+    col_widths: {}
+    grid_position: HOMRPI,ZGKSHH
+  components:
+  - type: Spacer
+    properties: {height: 35}
+    name: spacer_1_copy
+    layout_properties: {grid_position: 'NHNWRT,TECGHA'}
+  - type: Label
+    properties: {role: text-error-message, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: emailErrorMessage
+    layout_properties:
+      col_widths: {}
+      grid_position: NHNWRT,AEPHRN
+- type: ColumnPanel
+  properties: {col_widths: '{"XFBOUB":8,"FMCOLV":52}'}
+  name: column_panel_form_6
+  layout_properties: {grid_position: 'MXKFGP,TAXMCX'}
+  components:
+  - type: Label
+    properties: {role: form-label, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Atribuição, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: server
+    layout_properties: {grid_position: 'ZSMFZC,XFBOUB'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: '1px solid #cbccce'
+      enabled: true
+      foreground: ''
+      items: [Administrador, Liquidação, Financeiro, RC]
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:On Primary
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: DropDownAssignment
+    layout_properties:
+      col_widths: {}
+      grid_position: ZSMFZC,FMCOLV
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"SAYEUA":8,"UTJXYO":52}',
+    spacing_below: small, background: ''}
+  name: column_panel_3
+  layout_properties:
+    col_widths: {}
+    grid_position: RGZFLH,AMCQQM
+  components:
+  - type: Spacer
+    properties: {height: 36}
+    name: spacer_1_copy_2
+    layout_properties: {grid_position: 'NHNWRT,SAYEUA'}
+  - type: Label
+    properties: {role: text-error-message, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: assignmentErrorMessage
+    layout_properties:
+      col_widths: {}
+      grid_position: NHNWRT,UTJXYO
+- type: Button
+  properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
+    foreground: white, visible: true, text: Editar usuário, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: false, underline: false, icon: ''}
+  name: registerButton
+  layout_properties: {grid_position: 'EACDJZ,TVORET'}
+  event_bindings: {click: registerButton_click}
+is_package: true

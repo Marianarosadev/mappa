@@ -6,6 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...navbarRigth.resetPassword import resetPassword
+from ..registerUser import registerUser
 
 class userRow(userRowTemplate):
   def __init__(self, **properties):
@@ -46,3 +47,6 @@ class userRow(userRowTemplate):
         alert('Senha redefinida com sucesso!')
       else:
         alert('Ocorreu um erro inesperado, favor tente novamente')
+
+  def button_row_edit_click(self, **event_args):
+    alert(registerUser(self), large=True, buttons=None)

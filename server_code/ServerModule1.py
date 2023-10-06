@@ -8,6 +8,7 @@ import bcrypt
 import re
 import secrets
 import datetime
+import uuid
 
 @anvil.server.callable
 def validEmailInput(email):
@@ -47,7 +48,8 @@ def registerUser(name, email, assignment):
       name=name,
       assignment=assignment,
       confirmed_email=True,
-      enabled=True
+      enabled=True,
+      id=str(uuid.uuid4())
     )
     return True
   except Exception as e:

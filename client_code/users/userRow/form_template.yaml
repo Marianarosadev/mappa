@@ -47,6 +47,7 @@ components:
     underline: false, icon: 'fa:pencil'}
   name: button_row_edit
   layout_properties: {column: PDALDE}
+  event_bindings: {click: button_row_edit_click}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
     foreground: black, visible: true, text: '', font_size: null, font: '', spacing_above: small,

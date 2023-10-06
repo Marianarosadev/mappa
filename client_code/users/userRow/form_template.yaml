@@ -3,5 +3,62 @@ container:
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     auto_display_data: true, visible: true, font_size: null, font: '', spacing_above: none,
     spacing_below: none, italic: false, background: '', bold: false, underline: false}
-components: []
+components:
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_row_email
+  layout_properties: {column: ZUOWAE}
+  data_bindings:
+  - {property: text, code: 'self.item[''email'']'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_row_name
+  layout_properties: {column: CMDYOB}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_row_assignment
+  layout_properties: {column: FGHWUT}
+  data_bindings:
+  - {property: text, code: 'self.item[''assignment'']'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_row_enabled
+  layout_properties: {column: GPYLMG}
+  data_bindings:
+  - {property: text, code: 'self.item[''enabled'']'}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: blue, visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: 'fa:pencil'}
+  name: button_row_edit
+  layout_properties: {column: PDALDE}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: black, visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: 'fa:lock'}
+  name: button_row_reset_password
+  layout_properties: {column: DLFNAJ}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: red, visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: 'fa:trash'}
+  name: button_row_delete
+  layout_properties: {column: YQTJWS}
 is_package: true

@@ -1092,3 +1092,7 @@ div.plot-container.plotly svg.main-svg {
   width: 160px;
   height: 50px;
 }
+
+.anvil-role-data-grid-header {
+  border-bottom: 1px solid black;
+}

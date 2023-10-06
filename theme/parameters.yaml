@@ -59,6 +59,7 @@ roles:
 - {name: text-error-message}
 - {name: btn-outline}
 - {name: img-sidebar-left}
+- {name: data-grid-header}
 color_scheme:
   preset_groups:
   - name: Colour Scheme

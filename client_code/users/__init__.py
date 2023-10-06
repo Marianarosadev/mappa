@@ -10,6 +10,7 @@ from .registerUser import registerUser
 class users(usersTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
+    self.currentUser = anvil.users.get_user()
     self.refreshTable()
 
   def button_1_click(self, **event_args):
@@ -17,5 +18,5 @@ class users(usersTemplate):
 
   def refreshTable(self):
     usersRegistered = app_tables.users.search()
-    usersRegistered = [ dict(u) | {'userForm': self} for u in usersRegistered]
+    usersRegistered = [ dict(u) | {'userForm': self, 'currentUser': self.currentUser} for u in usersRegistered]
     self.repeating_panel_1.items = usersRegistered

@@ -39,7 +39,7 @@ components:
   name: label_row_enabled
   layout_properties: {column: GPYLMG}
   data_bindings:
-  - {property: text, code: 'self.item[''enabled'']'}
+  - {property: text, code: '''Ativado'' if self.item[''enabled''] else ''Desativado'''}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
     foreground: blue, visible: true, text: '', font_size: null, font: '', spacing_above: small,

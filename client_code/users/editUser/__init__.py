@@ -8,20 +8,25 @@ from anvil.tables import app_tables
 import re
 
 class editUser(editUserTemplate):
-  def __init__(self, userForm,**properties):
+  def __init__(self, userForm, id, name, email, assignment, **properties):
     self.init_components(**properties)
     self.userForm = userForm
+    self.inputName.text = name
+    self.inputEmail.text = email
+    self.DropDownAssignment.selected_value = assignment
+    self.previousEmail = email
+    self.id = id
 
-  def ediarButton_click(self, **event_args):
+  def editButton_click(self, **event_args):
     nameValid = self.validRegisterInputName()
     emailValid = self.validRegisterInputEmail()
     assignment = self.velidRegisterAssignment()
 
     if nameValid and emailValid and assignment:
-      returnRegister = anvil.server.call('registerUser', self.inputName.text, self.inputEmail.text, self.DropDownAssignment.selected_value)
+      returnRegister = anvil.server.call('editUser', self.id, self.inputName.text, self.inputEmail.text, self.DropDownAssignment.selected_value)
+      self.raise_event('x-close-alert')
       if returnRegister:
         self.userForm.refreshTable()
-        self.raise_event('x-close-alert')
         alert('Novo usuário cadastrado com sucesso')
       else:
         alert('Ocorreu um erro ao cadastrar o usuário, tente novamente')
@@ -37,8 +42,10 @@ class editUser(editUserTemplate):
       return True
 
   def validRegisterInputEmail(self):
+    if self.previousEmail == self.inputEmail.text:
+      return True
+      
     checkEmail = anvil.server.call('validEmailInput', self.inputEmail.text)
-
     if checkEmail['status'] is False:
       self.emailErrorMessage.text = checkEmail['message']
       self.column_panel_2.visible = True

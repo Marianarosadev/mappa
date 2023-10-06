@@ -84,3 +84,18 @@ def resetPasswordService(email, password):
   except Exception as e:
     print('e', e)
     return False
+
+@anvil.server.callable
+def editUser(id, name, email, assignment):
+    try:
+      user = app_tables.users.get(id=id)
+      user.update(
+        email=email, 
+        name=name,
+        assignment=assignment,
+      )
+      return True
+    except Exception as e:
+      print('e', e)
+      return False
+

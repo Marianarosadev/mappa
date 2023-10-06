@@ -19,9 +19,9 @@ class registerUser(registerUserTemplate):
 
     if nameValid and emailValid and assignment:
       returnRegister = anvil.server.call('registerUser', self.inputName.text, self.inputEmail.text, self.DropDownAssignment.selected_value)
+      self.raise_event('x-close-alert')
       if returnRegister:
         self.userForm.refreshTable()
-        self.raise_event('x-close-alert')
         alert('Novo usuário cadastrado com sucesso')
       else:
         alert('Ocorreu um erro ao cadastrar o usuário, tente novamente')

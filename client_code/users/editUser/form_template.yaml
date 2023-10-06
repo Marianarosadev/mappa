@@ -155,10 +155,10 @@ components:
       grid_position: NHNWRT,UTJXYO
 - type: Button
   properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Editar usuário, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
-    bold: false, underline: false, icon: ''}
+    foreground: white, visible: true, text: Salvar, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
   name: registerButton
   layout_properties: {grid_position: 'EACDJZ,TVORET'}
-  event_bindings: {click: registerButton_click}
+  event_bindings: {click: editButton_click}
 is_package: true

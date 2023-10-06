@@ -6,15 +6,14 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...navbarRigth.resetPassword import resetPassword
-from ..registerUser import registerUser
+from ..editUser import editUser
 
 class userRow(userRowTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    self.currentUser = anvil.users.get_user()
 
   def button_row_delete_click(self, **event_args):
-    if self.currentUser['email'] == self.item['email']:
+    if self.item['currentUser'] == self.item['email']:
       alert(
         'Não é possivel excluir seu próprio usuário',
         title='Excluir usuário' 
@@ -49,4 +48,4 @@ class userRow(userRowTemplate):
         alert('Ocorreu um erro inesperado, favor tente novamente')
 
   def button_row_edit_click(self, **event_args):
-    alert(registerUser(self), large=True, buttons=None)
+    alert(editUser(self.item['userForm'], self.item['id'], self.item['name'], self.item['email'], self.item['assignment']), large=True, buttons=None)

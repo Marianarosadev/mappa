@@ -19,7 +19,7 @@ class forgotPassword(forgotPasswordTemplate):
     if emailValid:
       sendCode = anvil.server.call('sendRecoverEmail', self.inputEmail.text)
       if sendCode['status'] is True:
-        open_form('recoverCode', self.inputEmail.text, previousPage = self)
+        open_form('login.recoverCode', self.inputEmail.text, previousPage = self)
       else:
         alert('Falha ao enviar código, tente novamente')
 

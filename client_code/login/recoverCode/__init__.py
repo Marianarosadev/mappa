@@ -19,7 +19,7 @@ class recoverCode(recoverCodeTemplate):
     user = app_tables.users.get(email=self.email)
     
     if user['recover_code'] == self.inputCode.text:
-      open_form('resetPassword', self.email, previousPage = self)
+      open_form('login.resetPassword', self.email, previousPage = self)
     else:
       self.codeErrorMessage.text = 'Código inválido'
       self.column_panel_2.visible = True

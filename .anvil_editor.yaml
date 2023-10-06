@@ -1,5 +1,6 @@
 unique_ids:
   forms:
+    users.registerUser: '1696516177544798232324522.8671'
     login.resetPassword: '1696358713404958866386900.0688'
     login.recoverCode: '1696342493380324876774376.22644'
     navbarRigth: '1696426469056766994682125.5542'
@@ -12,13 +13,13 @@ unique_ids:
     navbarRigth.resetPassword: '1696428305752453195059491.5044'
     login: '1695651759670417404998519.72235'
     users.userRow: '1696430734984552569522300.8877'
-    registerUser: '1696516177544798232324522.8671'
   modules: {}
   server_modules:
     ServerModule1: '1695653600789793581490818.4906'
   assets:
     Mapa_Positivo.png: '1695832496807367538629222.8744'
     mapa-logo.png: '1695837290419851727961823.8707'
+    mapa_logo (1).png: '1696606401629494934630702.8053'
     mapa_logo.png: '1695837430459520697299052.4188'
     standard-page.html: IB7T7VNGYMVSPSVOWM2JNM4HZC3XLNDD
     theme.css: UV3PI2RDRXYIBLDEI53ZHMU7YR2KF4LI

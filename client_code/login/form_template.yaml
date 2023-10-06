@@ -39,7 +39,7 @@ components:
       event_bindings: {pressed_enter: text_box_1_pressed_enter, focus: email_focus}
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RPTRBN":30,"WUOGQX":30}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RPTRBN":10,"WUOGQX":50}',
       spacing_below: small, background: ''}
     name: column_panel_2
     layout_properties: {grid_position: 'MTIFRG,MHNRED'}
@@ -72,7 +72,7 @@ components:
     event_bindings: {focus: password_focus}
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RPTRBN":30,"WUOGQX":30}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RPTRBN":10,"WUOGQX":50}',
       spacing_below: small, background: ''}
     name: column_panel_3
     layout_properties:
@@ -90,6 +90,14 @@ components:
         icon: ''}
       name: emailErrorMessage_password
       layout_properties: {grid_position: 'TEUXZB,WUOGQX'}
+  - type: Button
+    properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
+      foreground: white, visible: true, text: Login, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'JGAPSC,GEVXEQ'}
+    event_bindings: {click: button_1_click}
   - type: Link
     properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Esqueceu a senha?', font_size: null, wrap_on: mobile,
@@ -97,14 +105,6 @@ components:
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
     name: redirectRecoverPassword
-    layout_properties: {grid_position: 'YEVPFH,NRSHYV'}
+    layout_properties: {grid_position: 'UCFBMQ,PDKJEJ'}
     event_bindings: {click: redirectRecoverPassword_click}
-  - type: Button
-    properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Login, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: button_1
-    layout_properties: {grid_position: 'JGAPSC,GEVXEQ'}
-    event_bindings: {click: button_1_click}
 is_package: true

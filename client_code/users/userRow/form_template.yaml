@@ -54,6 +54,7 @@ components:
     underline: false, icon: 'fa:lock'}
   name: button_row_reset_password
   layout_properties: {column: DLFNAJ}
+  event_bindings: {click: button_row_reset_password_click}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
     foreground: red, visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -61,4 +62,5 @@ components:
     underline: false, icon: 'fa:trash'}
   name: button_row_delete
   layout_properties: {column: YQTJWS}
+  event_bindings: {click: button_row_delete_click}
 is_package: true

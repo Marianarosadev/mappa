@@ -8,21 +8,20 @@ from anvil.tables import app_tables
 import re
 
 class registerUser(registerUserTemplate):
-  def __init__(self, **properties):
+  def __init__(self, userForm,**properties):
     self.init_components(**properties)
+    self.userForm = userForm
 
   def registerButton_click(self, **event_args):
     nameValid = self.validRegisterInputName()
     emailValid = self.validRegisterInputEmail()
     assignment = self.velidRegisterAssignment()
 
-    print('nameValid', nameValid)
-    print('emailValid', emailValid)
-    print('assignment', assignment)
-
     if nameValid and emailValid and assignment:
       returnRegister = anvil.server.call('registerUser', self.inputName.text, self.inputEmail.text, self.DropDownAssignment.selected_value)
       if returnRegister:
+        self.userForm.refreshTable()
+        self.raise_event('x-close-alert')
         alert('Novo usuário cadastrado com sucesso')
       else:
         alert('Ocorreu um erro ao cadastrar o usuário, tente novamente')
@@ -63,4 +62,9 @@ class registerUser(registerUserTemplate):
 
   def DropDownAssignment_change(self, **event_args):
     self.column_panel_3.visible = False
+
+  def inputEmail_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
 

@@ -45,5 +45,5 @@ class login(loginTemplate):
     self.column_panel_3.visible = False
 
   def redirectRecoverPassword_click(self, **event_args):
-    open_form('forgotPassword', previousPage = self)
+    open_form('login.forgotPassword', previousPage = self)
     

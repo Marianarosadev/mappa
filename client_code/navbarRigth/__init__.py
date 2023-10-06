@@ -12,25 +12,25 @@ class navbarRigth(navbarRigthTemplate):
   def __init__(self, **properties):
     self.user = anvil.users.get_user()
     self.button_1.text = self.user['email']
-    column = ColumnPanel()
-    resetPasswordButton = Button(align='center', text='Redefinir Senha')
+    column = LinearPanel()
+    resetPasswordButton = Button(align='left', text='Redefinir Senha', foreground='black', icon='fa:lock')
     resetPasswordButton.add_event_handler('click', self.openResetPassword_click)
-    logoutButton = Button(align='center', text='Logout')
+    logoutButton = Button(align='center', text='Logout', foreground='black', icon='fa:sign-out')
     logoutButton.add_event_handler('click', self.logoutButtom_click)
     column.add_component(resetPasswordButton, full_width_row=True)
     column.add_component(logoutButton, full_width_row=True)
-    self.button_1.popover(column, placement='bottom', trigger='manual', auto_dismiss = True, max_width = '200px') 
+    self.button_1.popover(column, placement='bottom', trigger='manual', auto_dismiss = True, max_width = '300px') 
     
     self.init_components(**properties)
 
   def openResetPassword_click(self, **event_args):
     self.button_1.pop('hide')
     modalResetPass = resetPassword()
-    confirm = alert(modalResetPass, buttons=[('Confirmar', True), ('Cancelar', False)])
+    confirm = alert(modalResetPass, buttons=[('Confirmar', True), ('Cancelar', False)], large=True)
 
     while modalResetPass.button_1_click() is False:
       if comfirm:
-        confirm = alert(modalResetPass, buttons=[('Confirmar', True), ('Cancelar', False)])
+        confirm = alert(modalResetPass, buttons=[('Confirmar', True), ('Cancelar', False)], large=True)
       else:
         break
   

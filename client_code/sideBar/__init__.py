@@ -21,4 +21,8 @@ class sideBar(sideBarTemplate):
   def button_3_click(self, **event_args):
     open_form('users')
 
+  def button_3_copy_click(self, **event_args):
+    open_form('tpvQuery')
+
+
 

@@ -27,6 +27,16 @@ components:
     event_bindings: {click: button_3_click}
 - type: Button
   properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: black,
+    visible: true, text: TPV, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: 'fa:table'}
+  name: button_4
+  layout_properties:
+    col_widths: {}
+    grid_position: ZDAWUE,PBCSYW
+  event_bindings: {click: button_3_copy_click}
+- type: Button
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: black,
     visible: true, text: Sair, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: 'fa:sign-out'}

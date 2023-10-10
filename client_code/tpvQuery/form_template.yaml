@@ -1,0 +1,79 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: RichText
+  properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+    foreground: '', visible: true, font_size: null, content: '## Consulta TPV', font: '',
+    spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+  name: rich_text_1
+  layout_properties: {grid_position: 'ZBQEZE,PVQYNV'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'REFECA,SHBYCN'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Documento Parceiro, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'EZRPZW,QXZCEV'}
+  - type: TextBox
+    properties: {}
+    name: text_box_1
+    layout_properties: {grid_position: 'GTAOHL,WLWQQR'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_2
+  layout_properties: {grid_position: 'REFECA,VTDENJ'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Documento EC, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'YSHGWO,MFMVOL'}
+  - type: TextBox
+    properties: {}
+    name: text_box_2
+    layout_properties: {grid_position: 'YCQMFN,KVUXPF'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_3
+  layout_properties: {grid_position: 'REFECA,GHBKBP'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Data Inicial de Transação*, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'FOYJSC,MLCEYO'}
+  - type: DatePicker
+    properties: {}
+    name: date_picker_1
+    layout_properties: {grid_position: 'FLLEJL,WWCDZE'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_4
+  layout_properties: {grid_position: 'REFECA,BRZSCU'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Data Final de Transação*, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'JIBNZX,ZSPIOB'}
+  - type: DatePicker
+    properties: {}
+    name: date_picker_2
+    layout_properties: {grid_position: 'GVKMRZ,SNLVNC'}
+- type: Button
+  properties: {text: button_1}
+  name: button_1
+  layout_properties: {grid_position: 'CFQTUL,YMEEBP'}
+is_package: true

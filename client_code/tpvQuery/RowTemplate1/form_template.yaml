@@ -12,4 +12,24 @@ components:
   properties: {}
   name: label_3
   layout_properties: {column: HQJURH}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: DCOJOH}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {column: LEJTYH}
+- type: Label
+  properties: {}
+  name: label_6
+  layout_properties: {column: IHVCBD}
+- type: Label
+  properties: {}
+  name: label_7
+  layout_properties: {column: JTSMQA}
+- type: Label
+  properties: {}
+  name: label_8
+  layout_properties: {column: RHDJYD}
 is_package: true

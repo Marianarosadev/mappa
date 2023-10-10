@@ -1,0 +1,140 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: RichText
+  properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+    foreground: '', visible: true, font_size: null, content: '## Consulta TPV', font: '',
+    spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+  name: rich_text_1
+  layout_properties: {grid_position: 'ZBQEZE,PVQYNV'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'REFECA,SHBYCN'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Documento Parceiro, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'EZRPZW,QXZCEV'}
+  - type: TextBox
+    properties: {role: form-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '1px solid #cbccce', enabled: true, foreground: '', visible: true, text: '',
+      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      italic: false, background: 'theme:On Primary', bold: false, underline: false}
+    name: text_box_1
+    layout_properties: {grid_position: 'GTAOHL,WLWQQR'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_2
+  layout_properties: {grid_position: 'REFECA,VTDENJ'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Documento EC, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'YSHGWO,MFMVOL'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '1px solid #cbccce', enabled: true, foreground: '', visible: true, text: '',
+      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      italic: false, background: 'theme:On Primary', bold: false, underline: false}
+    name: text_box_2
+    layout_properties: {grid_position: 'YCQMFN,KVUXPF'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_3
+  layout_properties: {grid_position: 'REFECA,GHBKBP'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Data Inicial de Transação*, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'FOYJSC,MLCEYO'}
+  - type: DatePicker
+    properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+      placeholder: '', border: '1px solid #cbccce', enabled: true, foreground: '',
+      visible: true, font_size: null, font: '', spacing_above: small, spacing_below: small,
+      italic: false, date: '', min_date: '', background: 'theme:On Primary', bold: false,
+      underline: false, format: ''}
+    name: date_picker_1
+    layout_properties: {grid_position: 'FLLEJL,WWCDZE'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_4
+  layout_properties: {grid_position: 'REFECA,BRZSCU'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Data Final de Transação*, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'JIBNZX,ZSPIOB'}
+  - type: DatePicker
+    properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+      placeholder: '', border: '1px solid #cbccce', enabled: true, foreground: '',
+      visible: true, font_size: null, font: '', spacing_above: small, spacing_below: small,
+      italic: false, date: '', min_date: '', background: 'theme:On Primary', bold: false,
+      underline: false, format: ''}
+    name: date_picker_2
+    layout_properties: {grid_position: 'GVKMRZ,SNLVNC'}
+- type: FlowPanel
+  properties: {role: null, vertical_align: full, spacing: medium, align: justify,
+    tooltip: '', border: '', foreground: '', visible: true, spacing_above: small,
+    spacing_below: large, background: ''}
+  name: flow_panel_1
+  layout_properties: {grid_position: 'TOITYY,EWWNRN'}
+  components:
+  - type: Button
+    properties: {role: null, align: left, tooltip: '', border: '1px solid #cbccce',
+      enabled: true, foreground: black, visible: true, text: Baixar XML, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:download'}
+    name: button_2
+    layout_properties: {}
+  - type: Button
+    properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
+      foreground: white, visible: true, text: Buscar, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:search'}
+    name: button_1
+    layout_properties: {grid_position: 'YOWUPN,JFTDQG'}
+- type: DataGrid
+  properties:
+    role: null
+    columns:
+    - {id: SQILVV, title: CNPJ parceiro, data_key: column_1, $$hashKey: 'object:132203'}
+    - {id: IYMEAS, title: Nome parceiro, data_key: column_2, $$hashKey: 'object:132204'}
+    - {id: HQJURH, title: CNPJ EC, data_key: column_3, $$hashKey: 'object:132205'}
+    - {id: DCOJOH, title: Nome EC, data_key: column_4, $$hashKey: 'object:132254'}
+    - {id: LEJTYH, title: Valor líquido, data_key: column_5, $$hashKey: 'object:132256'}
+    - {id: IHVCBD, title: Data da transação, data_key: column_6, $$hashKey: 'object:132258'}
+    - {id: JTSMQA, title: Plataforma de Origem, data_key: column_7, $$hashKey: 'object:132260'}
+    - {id: RHDJYD, title: Valor bruto, data_key: column_8, $$hashKey: 'object:132262'}
+    auto_header: true
+    tooltip: ''
+    border: ''
+    foreground: ''
+    rows_per_page: 20
+    visible: true
+    wrap_on: never
+    show_page_controls: true
+    spacing_above: small
+    spacing_below: small
+    background: ''
+  name: data_grid_1
+  layout_properties: {grid_position: 'KMIYGE,MFZBBZ'}
+  components:
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: tpvQuery2.RowTemplate1}
+    name: repeating_panel_1
+    layout_properties: {}
+is_package: true

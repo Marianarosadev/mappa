@@ -1,3 +1,15 @@
 container: {type: DataRowPanel}
-components: []
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: SQILVV}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: IYMEAS}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: HQJURH}
 is_package: true

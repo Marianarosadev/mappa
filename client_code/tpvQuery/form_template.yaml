@@ -97,13 +97,20 @@ components:
       name: label_3
       layout_properties: {grid_position: 'FOYJSC,MLCEYO'}
     - type: DatePicker
-      properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+      properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
         placeholder: '', border: '1px solid #cbccce', enabled: true, foreground: '',
         visible: true, font_size: null, font: '', spacing_above: small, spacing_below: small,
         italic: false, date: '', min_date: '', background: 'theme:On Primary', bold: false,
         underline: false, format: ''}
       name: date_picker_1
       layout_properties: {grid_position: 'FLLEJL,WWCDZE'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
+        visible: false, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_5
+      layout_properties: {grid_position: 'CVIJCB,BDQJSJ'}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_4

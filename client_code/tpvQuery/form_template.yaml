@@ -72,8 +72,38 @@ components:
     properties: {}
     name: date_picker_2
     layout_properties: {grid_position: 'GVKMRZ,SNLVNC'}
-- type: Button
-  properties: {text: button_1}
-  name: button_1
-  layout_properties: {grid_position: 'CFQTUL,YMEEBP'}
+- type: FlowPanel
+  properties: {role: null, vertical_align: full, spacing: medium, align: justify,
+    tooltip: '', border: '', foreground: '', visible: true, spacing_above: small,
+    spacing_below: small, background: ''}
+  name: flow_panel_1
+  layout_properties: {grid_position: 'TOITYY,EWWNRN'}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: Baixar XML, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:download'}
+    name: button_2
+    layout_properties: {}
+  - type: Button
+    properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
+      foreground: white, visible: true, text: Buscar, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:search'}
+    name: button_1
+    layout_properties: {grid_position: 'YOWUPN,JFTDQG'}
+- type: DataGrid
+  properties:
+    columns:
+    - {id: SQILVV, title: Column 1, data_key: column_1}
+    - {id: IYMEAS, title: Column 2, data_key: column_2}
+    - {id: HQJURH, title: Column 3, data_key: column_3}
+  name: data_grid_1
+  layout_properties: {grid_position: 'KMIYGE,MFZBBZ'}
+  components:
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: tpvQuery.RowTemplate1}
+    name: repeating_panel_1
+    layout_properties: {}
 is_package: true

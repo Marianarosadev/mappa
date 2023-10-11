@@ -146,7 +146,7 @@ components:
     components:
     - type: Button
       properties: {role: null, align: left, tooltip: '', border: '1px solid #cbccce',
-        enabled: true, foreground: black, visible: true, text: Baixar XML, font_size: null,
+        enabled: true, foreground: black, visible: true, text: Baixar .XLSX, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: 'fa:download'}
       name: button_2

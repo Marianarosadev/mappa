@@ -9,10 +9,7 @@ import anvil.http
 
 class tpvQuery(tpvQueryTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
-    # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
     if self.date_picker_1.date is not None:
@@ -22,6 +19,70 @@ class tpvQuery(tpvQueryTemplate):
           url=url,
           method='GET',
         )
+        response = [{
+                    "cnpj_parceiro" : "44573847000130",
+                    "nome_parceiro" : "Franquia Alessandro Lourenco",
+                    "cnpj_ec" : "00041159953500",
+                    "nome_ec" : "Distribuidora Rs",
+                    "valor_bruto": "118.00",
+                    "valor_liquido" : 114.25,
+                    "data" : "2023-08-01",
+                    "origem" : "noxus"
+                  },{
+                    "cnpj_parceiro" : "44573847000130",
+                    "nome_parceiro" : "Franquia Alessandro Lourenco",
+                    "cnpj_ec" : "00041159953500",
+                    "nome_ec" : "Distribuidora Rs",
+                    "valor_bruto": "118.00",
+                    "valor_liquido" : 114.25,
+                    "data" : "2023-08-01",
+                    "origem" : "noxus"
+                  },{
+                    "cnpj_parceiro" : "44573847000130",
+                    "nome_parceiro" : "Franquia Alessandro Lourenco",
+                    "cnpj_ec" : "00041159953500",
+                    "nome_ec" : "Distribuidora Rs",
+                    "valor_bruto": "118.00",
+                    "valor_liquido" : 114.25,
+                    "data" : "2023-08-01",
+                    "origem" : "noxus"
+                  },{
+                    "cnpj_parceiro" : "44573847000130",
+                    "nome_parceiro" : "Franquia Alessandro Lourenco",
+                    "cnpj_ec" : "00041159953500",
+                    "nome_ec" : "Distribuidora Rs",
+                    "valor_bruto": "118.00",
+                    "valor_liquido" : 114.25,
+                    "data" : "2023-08-01",
+                    "origem" : "noxus"
+                  },{
+                    "cnpj_parceiro" : "44573847000130",
+                    "nome_parceiro" : "Franquia Alessandro Lourenco",
+                    "cnpj_ec" : "00041159953500",
+                    "nome_ec" : "Distribuidora Rs",
+                    "valor_bruto": "118.00",
+                    "valor_liquido" : 114.25,
+                    "data" : "2023-08-01",
+                    "origem" : "noxus"
+                  },{
+                    "cnpj_parceiro" : "44573847000130",
+                    "nome_parceiro" : "Franquia Alessandro Lourenco",
+                    "cnpj_ec" : "00041159953500",
+                    "nome_ec" : "Distribuidora Rs",
+                    "valor_bruto":"118.00",
+                    "valor_liquido" : 114.25,
+                    "data" : "2023-08-01",
+                    "origem" : "noxus"
+                  },{
+                    "cnpj_parceiro" : "44573847000130",
+                    "nome_parceiro" : "Franquia Alessandro Lourenco",
+                    "cnpj_ec" : "00041159953500",
+                    "nome_ec" : "Distribuidora Rs",
+                    "valor_bruto": "118.00",
+                    "valor_liquido" : 114.25,
+                    "data" : "2023-08-01",
+                    "origem" : "noxus"
+                  }]
       except Exception as e:
         print('e: ', e)
     

@@ -189,6 +189,6 @@ components:
       full_width_row: true
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: tpvQuery2.RowTemplate1}
+      properties: {spacing_above: none, spacing_below: none, item_template: tpvQuery.RowTemplate1}
       name: repeating_panel_1
       layout_properties: {}

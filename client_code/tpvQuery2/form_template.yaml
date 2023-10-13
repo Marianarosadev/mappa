@@ -134,7 +134,7 @@ components:
   layout_properties: {grid_position: 'KMIYGE,MFZBBZ'}
   components:
   - type: RepeatingPanel
-    properties: {spacing_above: none, spacing_below: none, item_template: tpvQuery2.RowTemplate1}
+    properties: {spacing_above: none, spacing_below: none, item_template: tpvQuery.RowTemplate1}
     name: repeating_panel_1
     layout_properties: {}
 is_package: true

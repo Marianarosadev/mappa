@@ -4,32 +4,48 @@ components:
   properties: {}
   name: label_1
   layout_properties: {column: SQILVV}
+  data_bindings:
+  - {property: text, code: 'self.item[''cnpj_parceiro'']'}
 - type: Label
   properties: {}
   name: label_2
   layout_properties: {column: IYMEAS}
+  data_bindings:
+  - {property: text, code: 'self.item[''nome_parceiro'']'}
 - type: Label
   properties: {}
   name: label_3
   layout_properties: {column: HQJURH}
+  data_bindings:
+  - {property: text, code: 'self.item[''cnpj_ec'']'}
 - type: Label
   properties: {}
   name: label_4
   layout_properties: {column: DCOJOH}
+  data_bindings:
+  - {property: text, code: 'self.item[''nome_ec'']'}
 - type: Label
   properties: {}
   name: label_5
   layout_properties: {column: LEJTYH}
+  data_bindings:
+  - {property: text, code: 'self.item[''valor_liquido'']'}
 - type: Label
   properties: {}
   name: label_6
   layout_properties: {column: IHVCBD}
+  data_bindings:
+  - {property: text, code: 'self.item[''data'']'}
 - type: Label
   properties: {}
   name: label_7
   layout_properties: {column: JTSMQA}
+  data_bindings:
+  - {property: text, code: 'self.item[''origem'']'}
 - type: Label
   properties: {}
   name: label_8
   layout_properties: {column: RHDJYD}
+  data_bindings:
+  - {property: text, code: 'self.item[''valor_bruto'']'}
 is_package: true

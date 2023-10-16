@@ -15,11 +15,25 @@ class tpvQuery(tpvQueryTemplate):
     if self.date_picker_1.date is not None:
       url = 'https://api-datascience.cappta.com.br/transactions_by_docid_date_v1v2noxus'
       try:
-        response = anvil.http.request( 
-          url=url,
-          method='GET',
-        )
-        response = [{
+        # response = anvil.http.request( 
+        #   url=url,
+        #   method='GET',
+        # )
+          
+        self.repeating_panel_1.items = [
+          {
+            "cnpj_parceiro" : "44573847000130",
+            "nome_parceiro" : "Franquia Alessandro Lourenco",
+            "cnpj_ec" : "00041159953500",
+            "nome_ec" : "Distribuidora Rs",
+            "valor_bruto": "118.00",
+            "valor_liquido" : 114.25,
+            "data" : "2023-08-01",
+            "origem" : "noxus"
+          }
+        ]
+      
+        response.data = [{
                     "cnpj_parceiro" : "44573847000130",
                     "nome_parceiro" : "Franquia Alessandro Lourenco",
                     "cnpj_ec" : "00041159953500",

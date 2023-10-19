@@ -17,8 +17,6 @@ def readTpv(initial_datetime, final_datetime=None, partner_document='', merchant
   if merchant_document != '':
     url+= '&merchant_document={}'.format(merchant_document) 
 
-  print('url: ', url)                                                           
-  
   try:
     response = anvil.http.request( 
       url=url,

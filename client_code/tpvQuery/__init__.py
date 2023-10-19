@@ -20,9 +20,9 @@ class tpvQuery(tpvQueryTemplate):
         self.text_box_1.text,
         self.text_box_2.text, 
       )
-      print('response: ', response)
+      print('response.data: ', response['data'])
       
-      #   self.repeating_panel_1.items = response
+      self.repeating_panel_1.items = response['data']
     else:
       self.label_5.text = 'Campo obrigatório'
       self.label_5.visible = True

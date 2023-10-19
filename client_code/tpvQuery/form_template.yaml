@@ -163,14 +163,14 @@ components:
     properties:
       role: null
       columns:
-      - {id: SQILVV, title: CNPJ parceiro, data_key: cnpj_parceiro, $$hashKey: 'object:132203'}
-      - {id: IYMEAS, title: Nome parceiro, data_key: nome_parceiro, $$hashKey: 'object:132204'}
+      - {id: SQILVV, title: Data da transação, data_key: data, $$hashKey: 'object:132203'}
+      - {id: IYMEAS, title: Nome EC, data_key: nome_ec, $$hashKey: 'object:132204'}
       - {id: HQJURH, title: CNPJ EC, data_key: cnpj_ec, $$hashKey: 'object:132205'}
-      - {id: DCOJOH, title: Nome EC, data_key: nome_ec, $$hashKey: 'object:132254'}
+      - {id: DCOJOH, title: Valor bruto, data_key: valor_bruto, $$hashKey: 'object:132254'}
       - {id: LEJTYH, title: Valor líquido, data_key: valor_liquido, $$hashKey: 'object:132256'}
-      - {id: IHVCBD, title: Data da transação, data_key: data, $$hashKey: 'object:132258'}
-      - {id: JTSMQA, title: Plataforma de Origem, data_key: origem, $$hashKey: 'object:132260'}
-      - {id: RHDJYD, title: Valor bruto, data_key: valor_bruto, $$hashKey: 'object:132262'}
+      - {id: IHVCBD, title: Nome parceiro, data_key: nome_parceiro, $$hashKey: 'object:132258'}
+      - {id: JTSMQA, title: CNPJ parceiro, data_key: cnpj_parceiro, $$hashKey: 'object:132260'}
+      - {id: RHDJYD, title: Plataforma de Origem, data_key: origem, $$hashKey: 'object:132262'}
       auto_header: true
       tooltip: ''
       border: ''

@@ -5,13 +5,13 @@ components:
   name: label_1
   layout_properties: {column: SQILVV}
   data_bindings:
-  - {property: text, code: 'self.item[''cnpj_parceiro'']'}
+  - {property: text, code: 'self.item[''data'']'}
 - type: Label
   properties: {}
   name: label_2
   layout_properties: {column: IYMEAS}
   data_bindings:
-  - {property: text, code: 'self.item[''nome_parceiro'']'}
+  - {property: text, code: 'self.item[''nome_ec'']'}
 - type: Label
   properties: {}
   name: label_3
@@ -23,7 +23,7 @@ components:
   name: label_4
   layout_properties: {column: DCOJOH}
   data_bindings:
-  - {property: text, code: 'self.item[''nome_ec'']'}
+  - {property: text, code: 'self.item[''valor_bruto'']'}
 - type: Label
   properties: {}
   name: label_5
@@ -35,17 +35,17 @@ components:
   name: label_6
   layout_properties: {column: IHVCBD}
   data_bindings:
-  - {property: text, code: 'self.item[''data'']'}
+  - {property: text, code: 'self.item[''nome_parceiro'']'}
 - type: Label
   properties: {}
   name: label_7
   layout_properties: {column: JTSMQA}
   data_bindings:
-  - {property: text, code: 'self.item[''origem'']'}
+  - {property: text, code: 'self.item[''cnpj_parceiro'']'}
 - type: Label
   properties: {}
   name: label_8
   layout_properties: {column: RHDJYD}
   data_bindings:
-  - {property: text, code: 'self.item[''valor_bruto'']'}
+  - {property: text, code: 'self.item[''origem'']'}
 is_package: true

@@ -13,24 +13,16 @@ class tpvQuery(tpvQueryTemplate):
 
   def button_1_click(self, **event_args):
     if self.date_picker_1.date is not None:
-      anvil.server.call(
+      response = anvil.server.call(
         'readTpv',
         self.date_picker_1.date,  
         self.date_picker_2.date, 
         self.text_box_1.text,
         self.text_box_2.text, 
       )
-      # url = 'https://api-datascience-homolog.cappta.com.br/transactions_by_docid_date_v1v2noxus'
+      print('response: ', response)
       
-      # try:
-        #   response = anvil.http.request( 
-        #     url=url,
-        #     method='GET',
-        #   )
-            
-        #   self.repeating_panel_1.items = response
-        # except Exception as e:
-        #   print('e: ', e)
+      #   self.repeating_panel_1.items = response
     else:
       self.label_5.text = 'Campo obrigatório'
       self.label_5.visible = True

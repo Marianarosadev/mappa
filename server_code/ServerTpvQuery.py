@@ -5,6 +5,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import anvil.http
+import pandas as pd
 
 @anvil.server.callable
 def readTpv(initial_datetime, final_datetime=None, partner_document='', merchant_document=''):
@@ -29,3 +30,12 @@ def readTpv(initial_datetime, final_datetime=None, partner_document='', merchant
   except Exception as e:
     print('e: ', e)
 
+@anvil.server.callable
+def dowloadExcelTpvQuery(repeating_panel):
+  df = pd.DataFrame(repeating_panel)
+  
+  content = io.BytesIO()
+  df.to_excel(content, index=False)
+  content.seek(0, 0)
+    
+  return anvil.BlobMedia(content=content.read(), content_type="application/vnd.ms-excel", name='{}{}_a{}.xlsx'.format(operacao, inicio, fim))

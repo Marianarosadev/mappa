@@ -6,6 +6,8 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
 import anvil.http
+import openpyxl
+from anvil import download
 
 class tpvQuery(tpvQueryTemplate):
   def __init__(self, **properties):
@@ -26,4 +28,23 @@ class tpvQuery(tpvQueryTemplate):
     else:
       self.label_5.text = 'Campo obrigatório'
       self.label_5.visible = True
+
+  def button_2_click(self, **event_args):
+    # Crie um novo arquivo XLSX
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+
+    data_grid = self.data_grid_1
+    for row in data_grid.get_components():
+      for col, cell in enumerate(row):
+        sheet.cell(row=row.index + 1, column=col + 1, value=cell.text)
+
+    # Salve o arquivo em um caminho temporário
+    temp_file_path = "temp.xlsx"
+    
+    workbook.save(temp_file_path)
+    
+    # Inicie o download do arquivo
+    download(temp_file_path)
+
 

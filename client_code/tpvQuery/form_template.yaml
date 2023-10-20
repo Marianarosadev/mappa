@@ -127,7 +127,7 @@ components:
       name: label_4
       layout_properties: {grid_position: 'JIBNZX,ZSPIOB'}
     - type: DatePicker
-      properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+      properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
         placeholder: '', border: '1px solid #cbccce', enabled: true, foreground: '',
         visible: true, font_size: null, font: '', spacing_above: small, spacing_below: small,
         italic: false, date: '', min_date: '', background: 'theme:On Primary', bold: false,
@@ -151,6 +151,7 @@ components:
         background: '', bold: false, underline: false, icon: 'fa:download'}
       name: button_2
       layout_properties: {}
+      event_bindings: {click: button_2_click}
     - type: Button
       properties: {role: btn-default, align: center, tooltip: '', border: '', enabled: true,
         foreground: white, visible: true, text: Buscar, font_size: null, font: '',

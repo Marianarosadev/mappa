@@ -2,6 +2,9 @@ dependencies:
 - dep_id: dep_yfsbja5wgugyjj
   version: {dev: false}
   resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
+- dep_id: dep_dlj127a1rupl
+  version: {dev: false}
+  resolution_hints: {app_id: PXW5ITL4NMFP2FLY, name: M3 App 1, package_name: M3_App_1}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
